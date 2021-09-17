@@ -1,7 +1,7 @@
 # Game of Amazons
 ## with VueJS 3 Vite Axios Vuex
 
-
+![](https://raw.githubusercontent.com/bespired/game-of-amazons/main/public/assets/github.png)
 
 
 ```
