@@ -1,7 +1,9 @@
 <template>
 	<button-row id="navbar">
-		<radio-button :buttons="buttons" v-model="boardmode"/>
-		<click-button label="Reset board" v-if="boardmode === 'edit'" @clicked="resetBoard()" />
+		<radio-button    :buttons="buttons" v-model="boardmode"/>
+		<checkbox-button label="Owners" v-model="ownermode"/>
+		<click-button label="Reset board"
+			v-if="boardmode === 'edit'" @clicked="resetBoard()" />
 		<drag-piece v-if="boardmode === 'edit'"/>
 	</button-row>
 </template>
@@ -16,7 +18,6 @@ export default {
 				{ id: 1, label: 'Edit', value: 'edit' },
 				{ id: 2, label: 'Game', value: 'game' },
 			],
-			// modes: 'edit'
 		}
 	},
 
@@ -25,6 +26,10 @@ export default {
 		boardmode: {
 			get() { return this.$store.getters['main/getBoardMode'] },
 			set(newValue) { this.$store.commit('main/setBoardMode', newValue) },
+		},
+		ownermode: {
+			get() { return this.$store.getters['main/getOwnerMode'] },
+			set(newValue) { this.$store.commit('main/setOwnerMode', newValue) },
 		},
 	},
 

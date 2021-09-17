@@ -7,6 +7,7 @@ export default {
 	state: {
 
 		boardmode: 'edit',
+		ownermode: false,
 
 		board: Field.board,
 		field: Field.field,
@@ -56,6 +57,7 @@ export default {
 	getters: {
 
 		getBoardMode: (state) => state.boardmode,
+		getOwnerMode: (state) => state.ownermode,
 		getPlayers:   (state) => state.players,
 		getWalls:     (state) => state.walls,
 		getOwners:    (state) => state.owners,
@@ -68,6 +70,7 @@ export default {
 			}
 			return Field.hoverBoard(state)
 		},
+
 		getLegals: (state) => {
 			if (!state.hover) return []
 			if (state.hover === 'addPiece') {
@@ -79,6 +82,7 @@ export default {
 
 	mutations: {
 		setBoardMode(state, mode) { state.boardmode = mode },
+		setOwnerMode(state, mode) { state.ownermode = mode },
 		setHover(state, hover)    { state.hover = hover },
 		setMover(state, mover)    { state.mover = mover },
 		setMove (state, mover) {
