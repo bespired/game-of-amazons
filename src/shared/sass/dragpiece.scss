@@ -1,0 +1,38 @@
+.drag-holder {
+    height: 5vmin;
+    width: 5vmin;
+    position: absolute;
+    right: 0;
+
+    &.moving {
+        width: 100%;
+        height: var(--overlay-height);
+        z-index: 5;
+
+        & > svg {
+            width:  var(--piece-size);
+            height: var(--piece-size);
+        }
+    }
+}
+
+.drag-piece {
+    transition: fill 200ms;
+    position: absolute;
+
+    width:  100%;
+    right: 0;
+
+    &.hover {
+        cursor: pointer;
+        fill: #1d55b1;
+        filter: brightness(1.5) drop-shadow(0 0 3px #1d55b177);
+    }
+
+    &.grab {
+        cursor: grabbing;
+        filter: brightness(1.5) drop-shadow( 3px 3px 5px #1d55b177);
+        transform: scale(1.05);
+        z-index: 3;
+    }
+}

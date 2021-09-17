@@ -1,0 +1,13 @@
+$dark:    #904545;
+$light:   #fff4e5;
+$bgdark:  #904545;
+$bglight: #fff4e5;
+$bgvalid: #2bd783;
+
+$button:  #904545;
+
+.color-dark    { color: var(--color-dark);   }
+.color-light   { color: var(--color-light);  }
+.color-bgdark  { color: var(--color-bgdark);   }
+.color-bglight { color: var(--color-bglight);  }
+.color-bgvalid { color: var(--color-bgvalid);  }

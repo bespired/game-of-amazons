@@ -1,0 +1,11 @@
+:root {
+    --color-dark: #{$dark};
+    --color-light: #{$light};
+    --color-bgdark: #{$bgdark};
+    --color-bglight: #{$bglight};
+    --color-bgvalid: #{$bgvalid};
+
+    --nav-top: 100px;
+    --overlay-height: 100px;
+    --piece-size: 50px;
+}

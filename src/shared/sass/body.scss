@@ -1,0 +1,23 @@
+    body {
+    	background-color: #f7f7f8;
+    	background-repeat: no-repeat;
+    	min-height: 100vh;
+    	background-size: 100% #{ $colorbar-bottom - $navbar-height};
+    	background-position: 0 #{$navbar-height};
+        display: flex;
+    }
+
+    h1 {
+    	font-size: 2em;
+    	margin: .75em 0
+    }
+
+    h1:first-of-type{
+        margin-top: 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin: .55em 0
+    }
+
