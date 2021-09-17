@@ -3,6 +3,11 @@
     display: flex;
     margin-bottom: 8px;
 
+    & > .button-row {
+        margin-bottom: 0;
+        margin-right: 8px;
+    }
+
     .click-button {
         margin-right: 8px;
     }

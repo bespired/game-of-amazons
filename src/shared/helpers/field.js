@@ -39,6 +39,16 @@ const Field = {
         ['', '', '', '', '', '', '', '', '', ''],
     ],
 
+    players: [
+        { id: 'b1', piece: 'amazon', color: 'b', position: 'D10' },
+        { id: 'b2', piece: 'amazon', color: 'b', position: 'G10' },
+        { id: 'b3', piece: 'amazon', color: 'b', position: 'A7'  },
+        { id: 'b4', piece: 'amazon', color: 'b', position: 'J7'  },
+        { id: 'w1', piece: 'amazon', color: 'w', position: 'D1'  },
+        { id: 'w2', piece: 'amazon', color: 'w', position: 'G1'  },
+        { id: 'w3', piece: 'amazon', color: 'w', position: 'A4'  },
+        { id: 'w4', piece: 'amazon', color: 'w', position: 'J4'  },
+    ],
 
     allCoords: [
         "A10", "B10", "C10", "D10", "E10", "F10", "G10", "H10", "I10", "J10",
@@ -353,6 +363,7 @@ const Field = {
 
     ownedBy(reached) {
         // reverse
+
         let owners = `${reached.w ? 'b' : ''}${reached.b ? 'w' : ''}`
         return owners !== '' ? `owner-${owners}` : 'owner-f'
     },

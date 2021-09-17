@@ -65,10 +65,10 @@ export default {
 		},
 
 		pieceleave() {
-			// this.hover = false
-			// this.grab  = false
-			// this.$store.commit('main/setHover', null)
-			// this.$store.commit('main/setMover', null)
+			this.hover = false
+			this.grab  = false
+			this.$store.commit('main/setHover', null)
+			this.$store.commit('main/setMover', null)
 		},
 
 		pieceselect() {
@@ -126,31 +126,17 @@ export default {
 				const legals   = this.$store.getters['main/getLegals']
 
 				if ( legals.indexOf(location) > -1) {
-					// console.log( 'mover:', mover, legals)
 					this.$store.commit('main/addWall', mover)
 				}
 			}
 
-			// const px = boardPosition.x + this.offset.left
-			// const gy = boardPosition.y + this.offset.top - this.offset.grid
-
-			// let sqx = Math.round(px / this.square)
-			// let sqy = Math.round(gy / this.square)
-
-			// if ((sqx >= -0) && (sqx <= 9) && (sqy >=-0) && (sqy <= 9)) {
-			// 	console.log(sqx, sqy)
-			// }
-
-			// this.$store.commit('main/addWall', {p:'p0', h:sqx, v:sqy})
-
-			this.hover = false
-			this.grab  = false
-			this.$store.commit('main/setHover', null)
-			this.$store.commit('main/setMover', null)
-
+			this.hover    = false
+			this.grab     = false
 			this.moving   = false
 			this.location = null
-			// this.$store.commit('main/setHover', null)
+
+			this.$store.commit('main/setHover', null)
+			this.$store.commit('main/setMover', null)
 
 		},
 

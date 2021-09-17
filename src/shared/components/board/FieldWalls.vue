@@ -4,7 +4,7 @@
 		@mouseup   = "release()"
 		:class="{ moving : moving }"
 	>
-		<template v-for="(wall, idx) in walls" :key="`wall-${idx}`">
+		<template v-for="(wall, idx) in walls" :key="`wll-${idx}`">
 			<play-piece
 				@mouseover = "hover(wall)"
 				@mouseleave= "leave(wall)"

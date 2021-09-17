@@ -11,6 +11,7 @@ export default {
 		board: Field.board,
 		field: Field.field,
 
+		// players: clone(Field.players),
 		players: [
 			{ id: 'b1', piece: 'amazon', color: 'b', position: 'D10', reach: [] },
 			{ id: 'b2', piece: 'amazon', color: 'b', position: 'G10', reach: [] },
@@ -21,6 +22,7 @@ export default {
 			{ id: 'w3', piece: 'amazon', color: 'w', position: 'A4' , reach: [] },
 			{ id: 'w4', piece: 'amazon', color: 'w', position: 'J4' , reach: [] },
 		],
+		owners: [],
 		walls: [
 			{ id: 'p1',  piece: 'wall', position: 'D9' },
 			{ id: 'p2',  piece: 'wall', position: 'G9' },
@@ -46,9 +48,6 @@ export default {
 			{ id: 'p23', piece: 'wall', position: 'F5' },
 			{ id: 'p24', piece: 'wall', position: 'E5' },
 		],
-
-		owners: [],
-
 		hover: null,
 		mover: null,
 
@@ -104,7 +103,13 @@ export default {
 				position: Field.numsToCoord(mover.h, mover.v)
 			})
 			Field.freefields(state)
-		}
+		},
+		resetBoard(state) {
+			state.players = clone(Field.players)
+			state.walls   = []
+			Field.freefields(state)
+		},
+
 	},
 
 	actions: {

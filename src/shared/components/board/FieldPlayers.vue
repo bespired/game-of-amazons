@@ -4,7 +4,7 @@
 		@mouseup   = "release()"
 		:class="{ moving : moving }"
 	>
-		<template v-for="(player, idx) in players" :key="`player-${idx}`">
+		<template v-for="(player, idx) in players" :key="`plr-${idx}`">
 			<play-piece
 				@mouseover   = "hover(player)"
     			@mouseleave  = "leave(player)"

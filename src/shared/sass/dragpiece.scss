@@ -1,6 +1,7 @@
 .drag-holder {
     height: 5vmin;
     width: 5vmin;
+    max-height: 32px;
     position: absolute;
     right: 0;
 
@@ -20,7 +21,7 @@
     transition: fill 200ms;
     position: absolute;
 
-    width:  100%;
+    height:  100%;
     right: 0;
 
     &.hover {

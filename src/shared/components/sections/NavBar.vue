@@ -1,6 +1,7 @@
 <template>
 	<button-row id="navbar">
 		<radio-button :buttons="buttons" v-model="boardmode"/>
+		<click-button label="Reset board" v-if="boardmode === 'edit'" @clicked="resetBoard()" />
 		<drag-piece v-if="boardmode === 'edit'"/>
 	</button-row>
 </template>
@@ -25,6 +26,12 @@ export default {
 			get() { return this.$store.getters['main/getBoardMode'] },
 			set(newValue) { this.$store.commit('main/setBoardMode', newValue) },
 		},
+	},
+
+	methods: {
+		resetBoard() {
+			this.$store.commit('main/resetBoard')
+		}
 	}
 
 }

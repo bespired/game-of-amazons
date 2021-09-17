@@ -1,5 +1,6 @@
 <template>
-	<svg :data-name="pieceName" :ref="piece.id" :id="piece.id" viewBox="0 0 1010 1000">
+	<svg :data-name="pieceName"
+		:ref="piece.id" :id="piece.id" viewBox="0 0 1010 1000">
 		<template v-for="path in pieces[pieceName]">
 			<component :is="componentType(path)" :path="path" />
 		</template>
