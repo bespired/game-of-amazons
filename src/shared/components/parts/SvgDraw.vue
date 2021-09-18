@@ -3,20 +3,7 @@
 		<path :d="pieces[name].d" :style="pieces[name].s" />
 	</svg>
 </template>
-<style>
-.checkbox{
-	width: 18px;
-	height: 20px;
-	margin-left: -4px;
-    margin-right: 6px;
-    fill: currentcolor;
-    fill-rule: evenodd;
-    clip-rule: evenodd;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 1.5;
-}
-</style>
+
 <script>
 
 export default {
@@ -50,3 +37,18 @@ export default {
 	}
 }
 </script>
+
+<style>
+.checkbox{
+	width: 1em;
+	height: 1em;
+	margin-left: -4px;
+    margin-right: 6px;
+    fill: currentcolor;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1.5;
+}
+</style>

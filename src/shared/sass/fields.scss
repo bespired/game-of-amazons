@@ -1,204 +1,240 @@
 .play-field {
-    position: relative;
+	position: relative;
 }
 
 @for $vertical from 0 through 9 {
-    .play-background > span:nth-child(#{$vertical * 10 + 1}):before {
-        margin-left: -20px;
-        content: "#{10 - $vertical}";
-        position: absolute;
-    }
+	.play-background>span:nth-child(#{$vertical * 10 + 1}):before {
+		margin-left: -20px;
+		content: "#{10 - $vertical}";
+		position: absolute;
+	}
 }
 
-.owner-0, .owner-w, .owner-b, .owner-wb, .owner-bw, .owner-f{
-    height: 4%;
-    width: 4%;
-    margin: 3%;
-    border: 3px solid transparent;
-    // border-radius: 3px;
-    border-radius: 50%;
-    opacity: 0.6;
+.owner-0,
+.owner-w,
+.owner-b,
+.owner-wb,
+.owner-bw,
+.owner-f {
+	height: 4%;
+	width: 4%;
+	margin: 3%;
+	border: 3px solid transparent;
+	border-radius: 50%;
+	opacity: 0.6;
 }
 
 .owner-b {
-    border-color: black;
-    box-shadow: inset 0 0 0px 1px rgba(255,255,255,0.25)
+	border-color: black;
+	box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.25)
 }
+
 .owner-w {
-    border-color: white;
-    box-shadow: inset 0 0 0px 1px rgba(0,0,0,0.25)
+	border-color: white;
+	box-shadow: inset 0 0 0px 1px rgba(0, 0, 0, 0.25)
 }
-.owner-wb, .owner-bw {
-    // border: 10px solid transparent;
-    border-bottom-color: white;
-    border-top-color: black;
-    transform: rotate( -45deg );
+
+.owner-wb,
+.owner-bw {
+	// border: 10px solid transparent;
+	border-bottom-color: white;
+	border-top-color: black;
+	transform: rotate(-45deg);
 }
 
 
 .owners {
-    span:nth-child(20n+20),
-    span:nth-child(20n+12),
-    span:nth-child(20n+14),
-    span:nth-child(20n+16),
-    span:nth-child(20n+18),
-    span:nth-child(20n-19),
-    span:nth-child(20n-17),
-    span:nth-child(20n-15),
-    span:nth-child(20n-13),
-    span:nth-child(20n-11) {
-        &.owner-wb, &.owner-bw {
-            border-bottom-color: white;
-            border-left-color: white;
-            border-top-color: black;
-            border-right-color: black;
-            opacity: 0.9;
-            box-shadow: inset 0 0 0px 1px rgba(0,0,0,0.25);
-        }
-    }
 
-    span:nth-child(20n+11),
-    span:nth-child(20n+13),
-    span:nth-child(20n+15),
-    span:nth-child(20n+17),
-    span:nth-child(20n+19),
-    span:nth-child(20n-18),
-    span:nth-child(20n-16),
-    span:nth-child(20n-14),
-    span:nth-child(20n-12),
-    span:nth-child(20n-10) {
-        &.owner-wb, &.owner-bw {
-            border-bottom-color: white;
-            border-left-color: white;
-            border-top-color: black;
-            border-right-color: black;
-            box-shadow: inset 0 0 0px 1px rgba(255,255,255,0.25);
+	span:nth-child(20n+20),
+	span:nth-child(20n+12),
+	span:nth-child(20n+14),
+	span:nth-child(20n+16),
+	span:nth-child(20n+18),
+	span:nth-child(20n-19),
+	span:nth-child(20n-17),
+	span:nth-child(20n-15),
+	span:nth-child(20n-13),
+	span:nth-child(20n-11) {
 
-        }
-    }
+		&.owner-wb,
+		&.owner-bw {
+			border-bottom-color: white;
+			border-left-color: white;
+			border-top-color: black;
+			border-right-color: black;
+			opacity: 0.9;
+			box-shadow: inset 0 0 0px 1px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	span:nth-child(20n+11),
+	span:nth-child(20n+13),
+	span:nth-child(20n+15),
+	span:nth-child(20n+17),
+	span:nth-child(20n+19),
+	span:nth-child(20n-18),
+	span:nth-child(20n-16),
+	span:nth-child(20n-14),
+	span:nth-child(20n-12),
+	span:nth-child(20n-10) {
+
+		&.owner-wb,
+		&.owner-bw {
+			border-bottom-color: white;
+			border-left-color: white;
+			border-top-color: black;
+			border-right-color: black;
+			box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.25);
+
+		}
+	}
 
 }
 
 
 
-.horizontal-letters{
-    position: absolute;
-    display: flex;
-    width: 80vmin;
-    .horizontal-letter {
-        display: flex;
-        width: 8vmin;
-        & > span { margin: auto;}
-    }
+.horizontal-letters {
+	position: absolute;
+	display: flex;
+	width: 80vmin;
+
+	.horizontal-letter {
+		display: flex;
+		width: 8vmin;
+
+		&>span {
+			margin: auto;
+		}
+	}
 }
+
 .play-background {
-    border: 1px solid var(--color-dark);
-    position: relative;
-    width: 80vmin;
-    height: 80vmin;
+	border: 1px solid var(--color-dark);
+	position: relative;
+	width: 80vmin;
+	height: 80vmin;
 }
 
-.field-0, .field-1, .field-10, .field-11, .field-20, .field-21 {
-    width: 10%;
-    height: 10%;
+.field-0,
+.field-1,
+.field-10,
+.field-11,
+.field-20,
+.field-21 {
+	width: 10%;
+	height: 10%;
 }
 
-.field-0, .field-10, .field-20 {
-    background-color: var(--color-bglight);
-}
-.field-1, .field-11, .field-21 {
-    background-color: var(--color-bgdark);
-}
-
-.field-10:after, .field-11:after,
-.field-20:after, .field-21:after {
-    display: block;
-    content: '';
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0.2);
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
-    margin-top: 25%;
+.field-0,
+.field-10,
+.field-20 {
+	background-color: var(--color-bglight);
 }
 
-.field-20:after, .field-21:after {
-    background-color: var(--color-bgvalid);
-    width: 60%;
-    height: 60%;
-    margin-left: 20%;
-    margin-top: 20%;
+.field-1,
+.field-11,
+.field-21 {
+	background-color: var(--color-bgdark);
+}
+
+.field-10:after,
+.field-11:after,
+.field-20:after,
+.field-21:after {
+	display: block;
+	content: '';
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+	margin-top: 25%;
+}
+
+.field-20:after,
+.field-21:after {
+	background-color: var(--color-bgvalid);
+	width: 60%;
+	height: 60%;
+	margin-left: 20%;
+	margin-top: 20%;
 }
 
 .wall {
-    position: absolute;
+	position: absolute;
 }
 
-.owners, .players, .walls  {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
+.owners,
+.players,
+.walls {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
 }
 
-.players, .walls {
+.players,
+.walls {
 
-    &.moving{
-        pointer-events: all;
-        z-index: 2;
-    }
+	&.moving {
+		pointer-events: all;
+		z-index: 2;
+	}
 
-    &.moving ~ .players > svg{
-        z-index: 1;
-        pointer-events: none;
-    }
+	&.moving~.players>svg {
+		z-index: 1;
+		pointer-events: none;
+	}
 
-    .piece-color {
-        fill: #222222;
-        transition: fill 200ms;
-    }
+	.piece-color {
+		fill: #222222;
+		transition: fill 200ms;
+	}
 
-    & > svg{
-        position: absolute;
-        pointer-events: all;
-        width: 10%;
-        height: 10%;
+	&>svg {
+		position: absolute;
+		pointer-events: all;
+		width: 10%;
+		height: 10%;
 
-        fill-rule:evenodd;
-        clip-rule:evenodd;
-        stroke-linejoin:round;
-        stroke-miterlimit:2;
+		fill-rule: evenodd;
+		clip-rule: evenodd;
+		stroke-linejoin: round;
+		stroke-miterlimit: 2;
 
-        filter: drop-shadow(0 0 3px #00000077);
+		filter: drop-shadow(0 0 3px #00000077);
 
-        transition: transform 100ms;
+		transition: transform 100ms;
 
-        &.hover {
-            cursor: pointer;
-            filter: brightness(1.5) drop-shadow(0 0 3px #1d55b177);
-            .piece-color {
-                fill: #1d55b1;
-            }
+		&.hover {
+			cursor: pointer;
+			filter: brightness(1.5) drop-shadow(0 0 3px #1d55b177);
 
-        }
+			.piece-color {
+				fill: #1d55b1;
+			}
 
-        &.grab {
-            cursor: grabbing;
-            filter: brightness(1.5) drop-shadow( 3px 3px 5px #1d55b177);
-            transform: scale(1.05);
-            z-index: 3;
-        }
-    }
+		}
 
-    & > .color-white{
-        background-color: var(--color-light);
-        background-color: white;
-    }
+		&.grab {
+			cursor: grabbing;
+			filter: brightness(1.5) drop-shadow(3px 3px 5px #1d55b177);
+			transform: scale(1.05);
+			z-index: 3;
+		}
+	}
 
-    & > .color-black{
-        background-color: var(--color-dark);
-        background-color: black;
-    }
+	&>.color-white {
+		background-color: var(--color-light);
+		background-color: white;
+	}
+
+	&>.color-black {
+		background-color: var(--color-dark);
+		background-color: black;
+	}
 }
 
 
@@ -224,7 +260,4 @@ svg[class*="8"]  { top: 20%; }
 svg[class*="9"]  { top: 10%; }
 svg[class*="10"] { top:  0%; }
 
-
 svg[class^="cell-add"] { left: 90%; top: -11%;}
-
-
