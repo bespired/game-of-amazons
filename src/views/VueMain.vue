@@ -1,5 +1,6 @@
 <template>
-    <nav-bar />
+    <nav-bar   />
+    <stats-bar />
     <play-field v-keydown="handleKeys" />
 </template>
 <script>

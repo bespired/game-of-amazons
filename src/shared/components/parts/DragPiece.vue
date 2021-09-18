@@ -65,10 +65,10 @@ export default {
 		},
 
 		pieceleave() {
-			this.hover = false
-			this.grab  = false
-			this.$store.commit('main/setHover', null)
-			this.$store.commit('main/setMover', null)
+			// this.hover = false
+			// this.grab  = false
+			// this.$store.commit('main/setHover', null)
+			// this.$store.commit('main/setMover', null)
 		},
 
 		pieceselect() {
@@ -81,7 +81,8 @@ export default {
 				bounds[id] = piece.getBoundingClientRect()
 			})
 
-			const overlay   = bounds['board'].height + bounds['dragholder'].height + 10
+			const offset    = bounds['board'].top - bounds['dragholder'].top
+			const overlay   = bounds['board'].height + offset
 			const piecesize = bounds['b1'].height
 
 			RootVar.set('--overlay-height', `${overlay}px`)
@@ -91,8 +92,8 @@ export default {
 
 			this.offset = {
 				left: -piecesize / 2,
-				top:  piecesize * 0.25,
-				grid: bounds['dragholder'].height,
+				top:  offset - (piecesize / 2),
+				grid: offset,
 			}
 
 			const px = boardPosition.x + this.offset.left

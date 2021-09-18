@@ -7,8 +7,9 @@
 
 	&.moving {
 		width: 100%;
-		height: var(--overlay-height);
+		min-height: var(--overlay-height);
 		z-index: 5;
+		background-color: rgba(0,255,255,0.1);
 
 		&>svg {
 			width: var(--piece-size);

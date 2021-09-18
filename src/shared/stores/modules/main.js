@@ -100,7 +100,7 @@ export default {
 			Field.freefields(state)
 		},
 		addWall (state, mover) {
-			let num = state.walls.length + 1
+			let num = state.walls.length + 2
 			state.walls.push({
 				id:       `p${num}`,
 				piece:    'wall',

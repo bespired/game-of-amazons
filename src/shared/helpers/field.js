@@ -315,7 +315,6 @@ const Field = {
         }
         const dones = { w:[], b:[] }
 
-
         squares.forEach(square => {
             // if amazon is on this square ignore this square
             let collide = amazons.indexOf(square) > -1
@@ -363,7 +362,6 @@ const Field = {
 
     ownedBy(reached) {
         // reverse
-
         let owners = `${reached.w ? 'b' : ''}${reached.b ? 'w' : ''}`
         return owners !== '' ? `owner-${owners}` : 'owner-f'
     },
