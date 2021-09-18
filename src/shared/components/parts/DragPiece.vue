@@ -65,10 +65,9 @@ export default {
 		},
 
 		pieceleave() {
-			// this.hover = false
-			// this.grab  = false
-			// this.$store.commit('main/setHover', null)
-			// this.$store.commit('main/setMover', null)
+			this.hover = false
+			this.$store.commit('main/setHover', null)
+			this.$store.commit('main/setMover', null)
 		},
 
 		pieceselect() {

@@ -1,5 +1,7 @@
 <template>
-	<div class="stats-bar">...</div>
+	<div class="stats-bar">
+
+	</div>
 </template>
 
 <script>
